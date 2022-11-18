@@ -20,9 +20,17 @@ img {
   margin: 0 auto;
 }
 /* Typography */
+h1 {
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 1.7rem;
+}
+
 .title {
   font-size: 2.5em;
   margin-bottom: 1.5em;
+  font-weight: 900;
+  margin-top: 1em;
 }
 
 .title span {
@@ -32,6 +40,15 @@ img {
 }
 
 @media (min-width: 60rem) {
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
   .title {
     font-size: 3.7rem;
   }
@@ -68,9 +85,9 @@ img {
 /* Header */
 header {
   position: absolute;
-  width: 100%;
-  /* left: 0;
-  right: 0; */
+  /* width: 100%; */
+  left: 0;
+  right: 0;
   margin: 1em;
 }
 
@@ -122,5 +139,88 @@ nav a:focus {
   .home-hero {
     height: 100vh;
     padding-top: 35vh;
+  }
+}
+
+/* hero-home */
+
+.home-about-textbox {
+  background-color: #232323;
+  padding: 4em;
+  width: 100vw;
+  margin-left: -2.5vw;
+  outline: 2px solid #00ff6c;
+  outline-offset: -3em;
+  color: #fff;
+  position: relative;
+}
+
+.home-about-textbox h1 {
+  display: inline-block;
+  color: #00ff6c;
+  position: absolute;
+  top: 1em;
+  background-color: #232323;
+  padding: 0 0.145em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media (min-width: 27.5rem) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .home-about-textbox h1 {
+    top: 0.65em;
+  }
+}
+
+/* Screen less than almost 400px */
+@media (max-width: 23.375rem) {
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  .home-about-textbox h1 {
+    top: 2.1em;
+  }
+}
+
+@media (min-width: 60rem) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-about {
+    background-image: url('https://raw.githubusercontent.com/kevin-powell/How-to-build-a-responsive-website-from-scratch/master/img/who-we-are.jpg');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    padding-bottom: 10em;
+  }
+
+  .home-about-textbox {
+    width: 50%;
+    padding: 7em;
+    outline-offset: -3.75em;
+    margin-left: -2.5%;
+    top: -5em;
+    left: 8em;
+    text-align: left;
+    box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .home-about-textbox h1 {
+    top: 0.75em;
+    left: 6rem;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
   }
 }
