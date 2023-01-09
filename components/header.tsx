@@ -87,14 +87,20 @@ author_name}:DefaultMetaDataProps) => {
       <meta charSet='utf-8' />
       <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0'/>
-      <meta name='description' content={description || defaultMetaData.description}/>
-      <meta itemProp='name' content={title || defaultMetaData.title} />
-      <meta itemProp='description' content={description || defaultMetaData.description}/>
-      <meta itemProp='image' content={image || defaultMetaData.image} />
       <meta name="revisit-after" content="1 days"/>
       <meta name="language" content="English"/>
       <meta name="robots" content="index,follow"/>
       <meta name="reply-to" content="essel_r@outlook.com"/>
+      <meta name='description' content={description || defaultMetaData.description}/>
+      <meta itemProp='name' content={title || defaultMetaData.title} />
+      <meta itemProp='description' content={description || defaultMetaData.description}/>
+      <meta itemProp='image' content={image || defaultMetaData.image} />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta name="twitter:description" content="You cant create a company in one day. And building the perfect website also takes time. Search Engine Optimisaion and Inbound Marketing needs attention every day. Then after a few weeks you will start seeing results."/>
+      <meta name="twitter:title" content="The best day of my life"/>
+      <meta name="twitter:image" content="https://finlac-i-t-engineering-ltd.vercel.app/cctvall.png"/>
       
       <link rel='manifest' href='/manifest.json' />
       <link rel='apple-touch-icon' href='/icon-512x512.png'/>
@@ -108,3 +114,10 @@ author_name}:DefaultMetaDataProps) => {
 };
 
 export default Header;
+/* 
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="The best day of my life"/>
+<meta name="twitter:description" content="
+You can’t create a company in one day. And building the perfect website also takes time. Search Engine Optimisaion and Inbound Marketing needs attention every day. Then after a few weeks you will start seeing results."/>
+<meta name="twitter:image" content="https://finlac-i-t-engineering-ltd.vercel.app/cctvall.png"/>
+*/
