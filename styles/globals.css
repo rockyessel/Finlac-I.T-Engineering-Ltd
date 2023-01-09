@@ -20,7 +20,11 @@
   );
 } */
 
-.hero {
+body {
   width: 100%;
-  background: conic-gradient(from 150deg at 47% 48%, rgba(29, 177, 193, 1), rgba(168,38,66,1));
+  background: conic-gradient(
+    from 150deg at 47% 48%,
+    rgba(29, 177, 193, 1),
+    rgba(168, 38, 66, 1)
+  );
 }

@@ -9,15 +9,15 @@ const Navbar = (): JSX.Element => {
   };
 
   return (
-    <div className='z-[2] shadow-lg bg-gray-900 bg-opacity-[0.3] px-4 w-full h-20 fixed'>
-      <div className='container mx-auto flex justify-between items-center w-full text-gray-300 '>
+    <div className='z-[2] shadow-lg bg-gray-900 bg-opacity-[0.3] px-4 w-full h-auto fixed'>
+      <div className='container mx-auto flex justify-between items-center w-full h-20 text-gray-300 '>
         <span className='font-bold text-3xl z-[2]'>
           FEE<span className='text-4xl text-red-500'>.</span>{' '}
         </span>
 
         <ul className='hidden md:flex gap-1'>
           <li>Home</li>
-          <li>Home</li>
+          <li>About</li>
           <li>Home</li>
           <li>Home</li>
           <li>Home</li>
@@ -50,7 +50,7 @@ const Navbar = (): JSX.Element => {
         )}
 
         {showMenu && (
-          <div className='transition-all duration-400 md:hidden bg-gray-900 bg-opacity-[0.9] flex  justify-end items-center absolute top-0 left-0 w-full h-screen overflow-hidden'>
+          <div className='transition-all duration-400 md:hidden bg-gray-900 bg-opacity-[0.9] flex justify-end items-center absolute top-0 left-0 w-full h-screen overflow-hidden'>
             <div className='flex flex-col pt-20 pl-5 items-start gap-8 bg-gray-900 w-[280px] h-screen'>
               <ul className='flex flex-col uppercase divide-gray-800 items-start gap-8 bg-gray-900 w-full h-full'>
                 <li className='inline-flex justify-start items-center gap-2  hover:text-gray-500  duration-700 cursor-pointer w-full li text-center hover:border-none'>

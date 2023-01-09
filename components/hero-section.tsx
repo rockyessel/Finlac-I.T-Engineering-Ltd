@@ -5,7 +5,7 @@ function HeroSection() {
 
 
   return (
-    <section className='hero w-full h-auto pt-10 flex flex-col md:flex-row md:items-center md:justify-around px-4 2xl:px-3'>
+    <section className='w-full h-auto pt-10 flex flex-col md:flex-row md:items-center md:justify-around px-4 2xl:px-3'>
       <div className='md:max-w-lg order-2 md:order-1 flex flex-col items-center md:items-start gap-2'>
         <h1 className='w-full mb-2 text-center md:text-start font-extrabold  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
           Total
