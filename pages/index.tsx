@@ -11,7 +11,7 @@ const Home = () => {
         description={`
 FEE is a company that provides CCTV products and services for home and business surveillance. They have a team of experts who can help customers find the best solution for their needs, whether it's a single security camera or a comprehensive CCTV system.`}
         title={'Home | FINLAC IT & ENG. LTD.'}
-        image={'/website.png'}
+        image={'https://finlac-i-t-engineering-ltd.vercel.app/website.png'}
         type={'website'}
         url={''}
         alt={'FINLAC IT & ENG. LTD'}
