@@ -9,12 +9,12 @@ const Home = () => {
     <main>
       <Header
         description={`
-You can’t create a company in one day. And building the perfect website also takes time. Search Engine Optimisation and Inbound Marketing needs attention every day. Then after a few weeks you will start seeing results.`}
-        title={'The best day of my life'}
-        image={'/cctvall.png'}
+FEE is a company that provides CCTV products and services for home and business surveillance. They have a team of experts who can help customers find the best solution for their needs, whether it's a single security camera or a comprehensive CCTV system.`}
+        title={'Home | FINLAC IT & ENG. LTD.'}
+        image={'/website.png'}
         type={'website'}
         url={''}
-        alt={'any image'}
+        alt={'FINLAC IT & ENG. LTD'}
         keywords={'cars,books,shoes,sex,bad,cats'}
         publishedAt={'2020-06-15T16:20:37+00:00'}
         updatedAt={'2020-06-15T16:20:37+00:00'}
