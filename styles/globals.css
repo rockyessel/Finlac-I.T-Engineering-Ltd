@@ -6,3 +6,21 @@
   font-family: 'burtons';
   src: url('../public/Burtons.otf');
 }
+
+/* body {
+  width: 100%;
+  height: auto;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    75deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(50, 15, 40, 1) 45%,
+    rgba(161, 49, 49, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+} */
+
+.hero {
+  width: 100%;
+  background: conic-gradient(from 150deg at 47% 48%, rgba(29, 177, 193, 1), rgba(168,38,66,1));
+}
