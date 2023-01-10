@@ -68,8 +68,8 @@ FEE is a company that provides CCTV products and services for home and business 
           <div className='card w-full md:w-96 bg-base-100 shadow-xl'>
             <figure>
               <Image
-              width={1000}
-              height={1000}
+                width={1000}
+                height={1000}
                 className='w-full'
                 src='https://placeimg.com/400/225/arch'
                 alt='Shoes'
@@ -89,8 +89,8 @@ FEE is a company that provides CCTV products and services for home and business 
           <div className='card w-full md:w-96 bg-base-100 shadow-xl'>
             <figure>
               <Image
-              width={1000}
-              height={1000}
+                width={1000}
+                height={1000}
                 className='w-full'
                 src='https://placeimg.com/400/225/arch'
                 alt='Shoes'
@@ -110,8 +110,8 @@ FEE is a company that provides CCTV products and services for home and business 
           <div className='card w-full md:w-96 bg-base-100 shadow-xl'>
             <figure>
               <Image
-              width={1000}
-              height={1000}
+                width={1000}
+                height={1000}
                 className='w-full'
                 src='https://placeimg.com/400/225/arch'
                 alt='Shoes'
@@ -130,11 +130,13 @@ FEE is a company that provides CCTV products and services for home and business 
           </div>
         </div>
       </section>
-      <div className='radial-progress' style={{ '--value': `${progress}` }}>
+      {/* <div className='radial-progress' style={{ '--value':  }}>
         {progress}%
       </div>
 
+      <label>Progress bar</label>
       <input
+      title='vhgbnj'
         type='range'
         name=''
         value={progress}
@@ -142,7 +144,7 @@ FEE is a company that provides CCTV products and services for home and business 
         min={0}
         max={100}
         id=''
-      />
+      /> */}
 
       <section></section>
     </main>
