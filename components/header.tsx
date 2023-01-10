@@ -45,7 +45,7 @@ author_name}:DefaultMetaDataProps) => {
     alt: '',
     keywords: '',
     type: `website`,
-    url: `http://localhost:3001`,
+    url: `https://finlac-i-t-engineering-ltd.vercel.app`,
     publishedAt: '',
     updatedAt: '',
     author_name: '',

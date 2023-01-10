@@ -3,7 +3,6 @@ import Image from 'next/image';
 function HeroSection() {
   const [show, setShow] = React.useState<boolean>(false);
 
-
   return (
     <section className='w-full h-auto pt-10 flex flex-col md:flex-row md:items-center md:justify-around px-4 2xl:px-3'>
       <div className='md:max-w-lg order-2 md:order-1 flex flex-col items-center md:items-start gap-2'>
@@ -22,9 +21,7 @@ function HeroSection() {
           anymore.
         </p>
 
-        <button className='font-medium md:text-2xl w-fit duration-500 shadow-sm hover:shadow-teal-400 px-5 py-3 hover:bg-gradient-to-l bg-gradient-to-r hover:from-cyan-500 from-cyan-500 hover:to-teal-600 to-teal-600 rounded-md text-black'>
-          Contact us now
-        </button>
+        <button className='btn'>Contact us now</button>
       </div>
       <div className='order-1 md:order-2'>
         <Image
@@ -35,8 +32,6 @@ function HeroSection() {
           alt='cctvall'
         />
       </div>
-
-
     </section>
   );
 }
