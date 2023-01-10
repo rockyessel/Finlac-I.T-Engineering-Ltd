@@ -6,7 +6,7 @@ import Header from '../components/header';
 import Hero from '../components/hero';
 
 const Home = () => {
-  const [progress, setProgress] = React.useState(0);
+  const [progress, setProgress] = React.useState<string>('0');
 
   return (
     <main className='text-black bg-gray-300 overflow-x-hidden pb-10'>
@@ -67,7 +67,9 @@ FEE is a company that provides CCTV products and services for home and business 
         <div className='flex flex-col gap-5 md:flex-row'>
           <div className='card w-full md:w-96 bg-base-100 shadow-xl'>
             <figure>
-              <img
+              <Image
+              width={1000}
+              height={1000}
                 className='w-full'
                 src='https://placeimg.com/400/225/arch'
                 alt='Shoes'
@@ -86,7 +88,9 @@ FEE is a company that provides CCTV products and services for home and business 
           </div>
           <div className='card w-full md:w-96 bg-base-100 shadow-xl'>
             <figure>
-              <img
+              <Image
+              width={1000}
+              height={1000}
                 className='w-full'
                 src='https://placeimg.com/400/225/arch'
                 alt='Shoes'
@@ -105,7 +109,9 @@ FEE is a company that provides CCTV products and services for home and business 
           </div>
           <div className='card w-full md:w-96 bg-base-100 shadow-xl'>
             <figure>
-              <img
+              <Image
+              width={1000}
+              height={1000}
                 className='w-full'
                 src='https://placeimg.com/400/225/arch'
                 alt='Shoes'
@@ -138,9 +144,7 @@ FEE is a company that provides CCTV products and services for home and business 
         id=''
       />
 
-      <section>
-        
-      </section>
+      <section></section>
     </main>
   );
 };

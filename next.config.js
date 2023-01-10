@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['raw.githubusercontent.com', 'template66389.motopreview.com'],
+    domains: [
+      'raw.githubusercontent.com',
+      'template66389.motopreview.com',
+      'placeimg.com',
+    ],
   },
 };
 
