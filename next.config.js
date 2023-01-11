@@ -6,6 +6,7 @@ const nextConfig = {
       'raw.githubusercontent.com',
       'template66389.motopreview.com',
       'placeimg.com',
+      'images.unsplash.com',
     ],
   },
 };

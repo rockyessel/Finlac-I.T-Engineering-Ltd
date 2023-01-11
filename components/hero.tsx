@@ -4,42 +4,44 @@ import Image from 'next/image';
 const Hero = () => {
   return (
     <div
-      className='hero min-h-screen'
+      className='hero min-h-screen bg-gray-600 bt-20'
       style={{
-        backgroundImage: `url("https://images.unsplash.com/photo-1493540447904-49763eecf55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80")`,
+        backgroundImage: `url("https://images.unsplash.com/photo-1565591452825-67d6b7df1d47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1026&q=800")`,
       }}
     >
-      <div className='hero-overlay bg-opacity-60'></div>
-      <div className='hero-content text-center text-neutral-content'>
-        <section className='w-full h-auto pt-10 flex flex-col md:flex-row md:items-center md:justify-around px-4 2xl:px-3'>
-          <div className='md:max-w-lg order-2 md:order-1 flex flex-col items-center md:items-start gap-2'>
-            <h1 className='w-full mb-2 text-center md:text-start font-extrabold  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
-              Total
-              <br />
-              <span>Digital</span>
-              <br />
-              <span className='text-transparent bg-clip-text bg-gradient-to-b from-cyan-800 via-teal-800'>
-                Surveillance
+      <div className=' w-full h-full bg-black bg-opacity-70'>
+        <div className='w-full h-full text-neutral-content flex flex-col justify-center text-left'>
+          <div className='w-full'>
+            <p>
+              <span className='bg-white px-4 py-2 text-black font-extrabold'>
+                CCTV
               </span>
-            </h1>
-
-            <p className='xl:text-3xl md:max-w-md'>
-              There&apos;s no need to fret about your home or workplace security
-              anymore.
+              <span className='bg-rose-800 px-4 py-2 font-bold'>
+                SURVEILLANCE
+              </span>
             </p>
 
-            <button className='btn'>Contact us now</button>
+            <p className='w-full text-gray-300 md:text-start font-bold  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
+              Unique & Powerful <br />
+              Security Solutions
+            </p>
+
+            <p className='md:text-2xl md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-4xl'>
+              We provide security requirements of residential, commercial and
+              other clients, with the largest assortment of security cameras and
+              alarm systems installation.
+            </p>
+
+            <div className='flex gap-4'>
+              <button className='btn btn-primary rounded-none bg-rose-800 border-rose-800 active:bg-transparent hover:bg-rose-900 hover:border-rose-800'>
+                Contact us now!
+              </button>
+              <button className='btn btn-outline rounded-none border-rose-800 text-gray-300 active:bg-rose-800 hover:bg-rose-900'>
+                More About Us!
+              </button>
+            </div>
           </div>
-          <div className='order-1 md:order-2'>
-            <Image
-              src='/cctvalll.png'
-              className='md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl'
-              width={1300}
-              height={500}
-              alt='cctvall'
-            />
-          </div>
-        </section>
+        </div>
       </div>
     </div>
   );

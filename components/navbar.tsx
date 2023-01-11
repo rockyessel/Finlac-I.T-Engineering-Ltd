@@ -15,14 +15,16 @@ const Navbar = (): JSX.Element => {
           FEE<span className='text-4xl text-red-500'>.</span>{' '}
         </span>
 
+        {/* Desktop Menu */}
         <ul className='hidden md:flex gap-1'>
-          <li>Home</li>
+          <li className='text-rose-800 font-bold'>Home</li>
           <li>About</li>
-          <li>Home</li>
-          <li>Home</li>
-          <li>Home</li>
+          <li>Gallery</li>
+          <li>Service</li>
+          <li>Contact us</li>
         </ul>
 
+        {/* Menu Button */}
         {showMenu ? (
           <button
             type='button'
@@ -48,7 +50,7 @@ const Navbar = (): JSX.Element => {
             <span className='hidden md:block'>Menu</span>
           </button>
         )}
-
+        {/* Mobile Menu */}
         {showMenu && (
           <div className='transition-all duration-400 md:hidden bg-gray-900 bg-opacity-[0.9] flex justify-end items-center absolute top-0 left-0 w-full h-screen overflow-hidden'>
             <div className='flex flex-col pt-20 pl-5 items-start gap-8 bg-gray-900 w-[280px] h-screen'>
@@ -63,25 +65,25 @@ const Navbar = (): JSX.Element => {
                   <div>
                     <span className='font-extrabold text-gray-200'>02</span>.
                   </div>
-                  Portfolio
+                  About
                 </li>
                 <li className='inline-flex justify-start  items-center gap-2 hover:text-gray-500 hover:font-medium  duration-700 cursor-pointer w-full li text-center hover:border-none'>
                   <div>
                     <span className='font-extrabold text-gray-200'>03</span>.
                   </div>
-                  Thoughts
+                  Services
                 </li>
                 <li className='inline-flex justify-start  items-center gap-2 hover:text-gray-500 hover:font-medium  duration-700 cursor-pointer w-full li text-center hover:border-none'>
                   <div>
                     <span className='font-extrabold text-gray-200'>04</span>.
                   </div>
-                  About
+                  Gallery
                 </li>
                 <li className='inline-flex justify-start  items-center gap-2 hover:text-gray-500 hover:font-medium  duration-700 cursor-pointer w-full li text-center hover:border-none'>
                   <div>
                     <span className='font-extrabold text-gray-200'>05</span>.
                   </div>
-                  React out
+                  Contact us
                 </li>
               </ul>
 
