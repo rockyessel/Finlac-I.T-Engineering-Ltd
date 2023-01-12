@@ -159,7 +159,7 @@ const Home = () => {
 
       <section className='px-4 flex flex-col gap-5'>
         <div className='flex flex-col gap-5'>
-          <p className='w-full md:text-start font-bold  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
+          <p className='text-xl w-full md:text-2xl lg:text-3xl font-bold z-[100] lg:max-w-lg'>
             Solutions For Your Security
           </p>
           <p className='text-gray-500'>
@@ -181,7 +181,9 @@ const Home = () => {
       <section className='hidden h-full w-full md:flex md:items-center md:justify-center'>
         <section className='w-full'>
           <div>
-            <p>Our Best Features</p>
+            <p className='text-xl w-full md:text-2xl lg:text-3xl font-bold z-[100] lg:max-w-lg'>
+              Our Best Features
+            </p>
           </div>
           <OurFeatures />
         </section>
@@ -189,7 +191,7 @@ const Home = () => {
 
       <section className='w-screen px-4 bg-rose-800 text-gray-300 flex flex-col gap-20 py-5'>
         <div className='flex flex-col gap-5'>
-          <p className='w-full text-gray-300 md:text-start font-bold  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
+          <p className='text-xl w-full md:text-2xl lg:text-3xl font-bold z-[100] lg:max-w-lg text-gray-300'>
             More Reasons to Choose Us!
           </p>
 
@@ -383,10 +385,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <label htmlFor='my-modal' className='btn'>
-        open modal
-      </label>
     </main>
   );
 };
