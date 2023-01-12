@@ -9,6 +9,8 @@ import { AiOutlineArrowDown } from 'react-icons/ai';
 import { GiCctvCamera } from 'react-icons/gi';
 import AccordionCard from '../components/accordion-card';
 import { OurFeatures } from '../components';
+import { IoMdCheckmarkCircle } from 'react-icons/io';
+import { ImCheckmark } from 'react-icons/im';
 
 const Home = () => {
   return (
@@ -193,7 +195,9 @@ FEE is a company that provides CCTV products and services for home and business 
 
       <section>
         <div>
-          <p>Solutions For Your Security</p>
+          <p className='w-full md:text-start font-bold  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
+            Solutions For Your Security
+          </p>
           <p>
             Reduce the probability of crime happening on your property, it will
             reduce or eliminate any liability that falls on you if you can show
@@ -394,7 +398,7 @@ FEE is a company that provides CCTV products and services for home and business 
         </div>
       </section>
 
-      <section className='h-screen w-full flex items-center justify-center'>
+      <section className='hidden h-full w-full md:flex md:items-center md:justify-center'>
         <section className='w-full'>
           <div>
             <p>Our Best Features</p>
@@ -403,30 +407,214 @@ FEE is a company that provides CCTV products and services for home and business 
         </section>
       </section>
 
-      <section>
+      <section className='w-screen bg-rose-800 text-gray-300 flex flex-col gap-10 py-10'>
         <div>
-          <p>Our Process</p>
+          <p className='w-full text-gray-300 md:text-start font-bold  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
+            More Reasons to Choose Us!
+          </p>
+
+          <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
+              <IoMdCheckmarkCircle />
+              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
+            </li>
+            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
+              <IoMdCheckmarkCircle />
+              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
+            </li>
+            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
+              <IoMdCheckmarkCircle />
+              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
+            </li>
+            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
+              <IoMdCheckmarkCircle />
+              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
+            </li>
+            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
+              <IoMdCheckmarkCircle />
+              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
+            </li>
+            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
+              <IoMdCheckmarkCircle />
+              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
+            </li>
+          </ul>
         </div>
-        <div className=''>
-          <div>
-            <GiCctvCamera />
-            <span>your need</span>
-            <p>Search the services you need.</p>
+
+        <div className='w-full flex flex-col lg:flex-row justify-around gap-5'>
+          <div className='max-w-lg divide-y divide-gray-400'>
+            <div className='flex flex-col gap-5 pb-5'>
+              <p className='text-2xl font-bold'>
+                From Door And Window Sensors To Mobile Apps And Cameras System!
+              </p>
+              <p>
+                Our security camera system installation department is just
+                passionate about providing the best security system services and
+                solutions you an ever find.
+              </p>
+              <div className='flex gap-4'>
+                <button className='btn btn-primary rounded-none bg-gray-400 text-gray-50 border-rose-800 active:bg-transparent hover:bg-rose-900 hover:border-gray-400'>
+                  Check Products
+                </button>
+                <button className='btn btn-outline rounded-none border-gray-400 text-gray-300 active:bg-rose-800 hover:bg-rose-900 hover:border-gray-400'>
+                  More About Us!
+                </button>
+              </div>
+              <p>
+                Whether you’re home or away, we make smart simple, have a remote
+                access and control everything from lights, locks, and
+                thermostats.
+              </p>
+            </div>
+            <div className='flex gap-5 pt-5'>
+              <div className='max-w-[16rem] flex flex-col gap-2'>
+                <ImCheckmark className='text-2xl' />
+                <p className='font-bold'>Increase Security Scope</p>
+                <p>
+                  Combining surveillance camera installation with guards lets
+                  each guard view many areas.
+                </p>
+              </div>
+              <div className='max-w-[16rem] flex flex-col gap-2'>
+                <ImCheckmark className='text-2xl' />
+                <p className='font-bold'>Reduce Business Liability</p>
+                <p>
+                  Professionally installed security camera systems keep an eye
+                  on activity and eliminate downtime.
+                </p>
+              </div>
+            </div>
           </div>
-          <div>
-            <GiCctvCamera />
-            <span>enquiry</span>
-            <p>For enquiring make a call or mail us.</p>
-          </div>
-          <div>
-            <GiCctvCamera />
-            <span>confirm</span>
-            <p>Get your Quote and confirm us.</p>
-          </div>
-          <div>
-            <GiCctvCamera />
-            <span>stay calm</span>
-            <p>Feel free and Relax Yourself.</p>
+
+          <div className='w-full md:max-w-2xl px-4 md:px-16 py-10 text-black bg-gray-300  relative before:block before:absolute before:bg-rose-800 before:h-32 before:w-[22rem] before:z-[1] before:rotate-[45deg] before:-top-[2.5rem] before:left-[30.5rem]'>
+            <form className='flex flex-col gap-10'>
+              <div className='max-w-md flex flex-col gap-2'>
+                <p className='font-bold text-xl'>Request a quote</p>
+                <p>
+                  Please complete the form below, to request a quote, and we’ll
+                  be in touch. Or you can call us{' '}
+                  <span className='text-medium'>01061245741</span> and our
+                  specialists will provide the necessary help!
+                </p>
+              </div>
+
+              <div className='flex flex-col md:flex-row gap-5'>
+                <div className='flex flex-col'>
+                  <label>Used where:</label>
+                  <select
+                    title='options'
+                    className='select select-bordered w-full md:w-[15rem] rounded-none'
+                  >
+                    <option value='For Home'>Home</option>
+                    <option value='For Business'>Business</option>
+                  </select>
+                </div>
+
+                <div className='flex flex-col'>
+                  <label>Industry</label>
+                  <select
+                    title='options'
+                    className='select select-bordered w-full md:w-[15rem] rounded-none'
+                  >
+                    <option value='commercial building'>
+                      Commercial Building
+                    </option>
+                    <option value='manufacturing and logistics'>
+                      Manufacturing & Logistics
+                    </option>
+                    <option value='Pharmaceutic & Biotech'>
+                      Pharmaceutic & Biotech
+                    </option>
+                    <option value='Educational Buildings'>
+                      Educational Buildings
+                    </option>
+                    <option value='Healthcare Buildings'>
+                      Healthcare Buildings
+                    </option>
+                    <option value='Finance & Banking'>Finance & Banking</option>
+                    <option value='Others'>Others</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className='flex flex-col md:flex-row gap-5'>
+                <div className='flex flex-col'>
+                  <label>System Size</label>
+                  <select
+                    title={''}
+                    name='option'
+                    id=''
+                    className='select select-bordered w-full md:w-[15rem] rounded-none'
+                  >
+                    <option value='Small (1-5 locations)'>
+                      Small (1-5 locations)
+                    </option>
+                    <option value='Medium (6-10 locations)'>
+                      Medium (6-10 locations)
+                    </option>
+                    <option value='Large (11-20 locations)'>
+                      Large (11-20 locations)
+                    </option>
+                    <option value="I don't know">I don&apos;t Know</option>
+                  </select>
+                </div>
+
+                <div className='flex flex-col'>
+                  <label>Ownership</label>
+                  <select
+                    title={''}
+                    name='option'
+                    id=''
+                    className='select select-bordered w-full md:w-[15rem] rounded-none'
+                  >
+                    <option value="I'm representing occupant">
+                      I&apos;m representing occupant
+                    </option>
+                    <option value='I own the place'>I own the place</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className='flex flex-col md:flex-row gap-5'>
+                <div className='flex flex-col'>
+                  <label>First Name</label>
+                  <input
+                    type='text'
+                    placeholder='John'
+                    className='input w-full rounded-none md:w-[15rem]'
+                  />
+                </div>
+
+                <div className='flex flex-col'>
+                  <label>Last Name</label>
+                  <input
+                    type='text'
+                    placeholder='Doe'
+                    className='input w-full rounded-none md:w-[15rem]'
+                  />
+                </div>
+              </div>
+
+              <div className='flex flex-col md:flex-row gap-5'>
+                <div className='flex flex-col'>
+                  <label>Email Address</label>
+                  <input
+                    type='text'
+                    placeholder='name@company.com'
+                    className='input w-full rounded-none md:w-[15rem]'
+                  />
+                </div>
+
+                <div className='flex flex-col'>
+                  <label>Phone</label>
+                  <input
+                    type='text'
+                    placeholder='0546813132'
+                    className='input w-full rounded-none md:w-[15rem]'
+                  />
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
