@@ -11,7 +11,7 @@ const Hero = () => {
     >
       <div className=' w-full h-full bg-black bg-opacity-70'>
         <div className='w-full h-full text-neutral-content flex flex-col justify-center text-left'>
-          <div className='w-full'>
+          <div className='w-full flex flex-col px-4 gap-4 md:gap-10 md:px-16'>
             <p>
               <span className='bg-white px-4 py-2 text-black font-extrabold'>
                 CCTV
@@ -32,7 +32,7 @@ const Hero = () => {
               alarm systems installation.
             </p>
 
-            <div className='flex gap-4'>
+            <div className='flex flex-wrap gap-4'>
               <button className='btn btn-primary rounded-none bg-rose-800 border-rose-800 active:bg-transparent hover:bg-rose-900 hover:border-rose-800'>
                 Contact us now!
               </button>

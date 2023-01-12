@@ -8,24 +8,85 @@ import Footer from '../components/footer';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { GiCctvCamera } from 'react-icons/gi';
 import AccordionCard from '../components/accordion-card';
-import { OurFeatures } from '../components';
+import {
+  ChooseUsCard,
+  OurFeatures,
+  ScreenButton,
+  SolutionForYouCard,
+} from '../components';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
 import { ImCheckmark } from 'react-icons/im';
 
+const choose_us_data = [
+  { name: 'Alarm Monitoring 23/7' },
+  { name: 'Different Range' },
+  { name: 'Fire Monitor And Detection' },
+  { name: 'Live Stream From Any On Mobile' },
+  { name: 'Alerts, Schedules & Automation' },
+  { name: 'Affordable Rate' },
+];
+
+const solution_lists = [
+  {
+    title: 'Banking Sectors',
+    description:
+      'Nulla consequat massa quis enim. In enim justo, rhoncus ut, imperdiet',
+  },
+  {
+    title: 'Education Institute',
+    description:
+      'Nulla consequat massa quis enim. In enim justo, rhoncus ut, imperdiet',
+  },
+  {
+    title: 'Hospitality',
+    description:
+      'Nulla consequat massa quis enim. In enim justo, rhoncus ut, imperdiet',
+  },
+  {
+    title: 'City Public Area',
+    description:
+      'Nulla consequat massa quis enim. In enim justo, rhoncus ut, imperdiet',
+  },
+  {
+    title: 'Law Enforcement',
+    description:
+      'Nulla consequat massa quis enim. In enim justo, rhoncus ut, imperdiet',
+  },
+  {
+    title: 'Transportation',
+    description:
+      'Nulla consequat massa quis enim. In enim justo, rhoncus ut, imperdiet',
+  },
+  {
+    title: 'Real Estate',
+    description:
+      'Nulla consequat massa quis enim. In enim justo, rhoncus ut, imperdiet',
+  },
+  {
+    title: 'Telecom and Media',
+    description:
+      'Nulla consequat massa quis enim. In enim justo, rhoncus ut, imperdiet',
+  },
+  {
+    title: 'Shoping & Retail',
+    description:
+      'Nulla consequat massa quis enim. In enim justo, rhoncus ut, imperdiet',
+  },
+];
+
+const cctv_manufacturer = [
+  { image: '/flir.png' },
+  { image: '/hik.png' },
+  { image: '/van.png' },
+  { image: '/vicon.png' },
+  { image: '/ava.png' },
+];
+
 const Home = () => {
   return (
-    <main className='text-black bg-gray-100 overflow-x-hidden pb-10'>
-      <section className='fixed w-[100px] h-[100px] right-0 top-1/2 rotate-90 hidden md:flex md:gap-1 z-[101]'>
-        <button className='btn btn-primary rounded-none bg-rose-800 border-rose-800 active:text-black active:bg-transparent hover:bg-rose-900 hover:border-rose-800'>
-          Contact us now!
-        </button>
-        <button className='btn btn-primary rounded-none bg-rose-800 border-rose-800 active:text-black active:bg-transparent hover:bg-rose-900 hover:border-rose-800'>
-          More About Us!
-        </button>
-      </section>
+    <main className='text-black bg-gray-100 overflow-x-hidden pb-10 flex flex-col gap-16'>
       <Header
-        description={`
-FEE is a company that provides CCTV products and services for home and business surveillance. They have a team of experts who can help customers find the best solution for their needs, whether it's a single security camera or a comprehensive CCTV system.`}
+        description={`FEE is a company that provides CCTV products and services for home and business surveillance. They have a team of experts who can help customers find the best solution for their needs, whether it's a single security camera or a comprehensive CCTV system.`}
         title={'Home | FINLAC IT & ENG. LTD.'}
         image={'https://finlac-i-t-engineering-ltd.vercel.app/website.png'}
         type={'website'}
@@ -37,51 +98,26 @@ FEE is a company that provides CCTV products and services for home and business 
         MIME={'png'}
         author_name={''}
       />
-      {/* <Navbar /> */}
       <Hero />
-      {/* <HeroSection /> */}
+
       <section
-        className={`w-full h-auto py-10 flex justify-center items-center`}
+        id='container'
+        className={`w-full h-auto flex justify-between items-center px-4`}
       >
-        <Image
-          width={1000}
-          height={1000}
-          className={`w-64 z-[100]`}
-          src='/flir.png'
-          alt=''
-        />
-        <Image
-          width={1000}
-          height={1000}
-          className={`w-64 z-[100]`}
-          src='/hik.png'
-          alt=''
-        />
-        <Image
-          width={1000}
-          height={1000}
-          className={`w-64 z-[100]`}
-          src='/van.png'
-          alt=''
-        />
-        <Image
-          width={1000}
-          height={1000}
-          className={`w-64 z-[100]`}
-          src='/vicon.png'
-          alt=''
-        />
-        <Image
-          width={1000}
-          height={1000}
-          className={`w-64 z-[100]`}
-          src='/ava.png'
-          alt=''
-        />
+        {cctv_manufacturer?.map((image, index) => (
+          <Image
+            key={index}
+            width={1000}
+            height={1000}
+            className={`w-full h-12 md:w-64 z-[100] items`}
+            src={image?.image}
+            alt={image?.image}
+          />
+        ))}
       </section>
 
       <section className='w-full flex flex-col gap-10 lg:flex-row'>
-        <div className='z-[100] w-full lg:w-[50%] h-full flex- flex-col gap-5 justify-center'>
+        <div className='z-[100] px-4 w-full lg:w-[50%] h-full flex- flex-col gap-5 justify-center'>
           <h2 className='text-xl w-full md:text-2xl lg:text-3xl font-bold z-[100] lg:max-w-lg'>
             From Door And Window Sensors To Mobile Apps And Cameras System!
           </h2>
@@ -120,85 +156,12 @@ FEE is a company that provides CCTV products and services for home and business 
         </div>
       </section>
 
-      {/* <section className=' h-auto pt-10 flex flex-col gap-4 px-4 2xl:px-3'>
-        <span className='uppercase text-sm font-extralight'>Our Services</span>
-        <p className='text-xl font-bold'>
-          High-Quality Alarm and Security Services
-        </p>
-
-        <div className='flex flex-col gap-5 md:flex-row'>
-          <div className='card w-full md:w-96 bg-base-100 shadow-xl'>
-            <figure>
-              <Image
-                width={1000}
-                height={1000}
-                className='w-full'
-                src='https://placeimg.com/400/225/arch'
-                alt='Shoes'
-              />
-            </figure>
-            <div className='card-body'>
-              <h2 className='card-title'>Security Systems</h2>
-              <p>
-                We install burglar alarm systems with all extents of protection,
-                vaults, and panic alarms.
-              </p>
-              <div className='card-actions justify-start'>
-                <button className='btn btn-primary'>Read more</button>
-              </div>
-            </div>
-          </div>
-          <div className='card w-full md:w-96 bg-base-100 shadow-xl'>
-            <figure>
-              <Image
-                width={1000}
-                height={1000}
-                className='w-full'
-                src='https://placeimg.com/400/225/arch'
-                alt='Shoes'
-              />
-            </figure>
-            <div className='card-body'>
-              <h2 className='card-title'>Central Station Monitoring</h2>
-              <p>
-                We offer 24-hour central station monitoring service for all
-                installations.
-              </p>
-              <div className='card-actions justify-start'>
-                <button className='btn btn-primary'>Read more</button>
-              </div>
-            </div>
-          </div>
-          <div className='card w-full md:w-96 bg-base-100 shadow-xl'>
-            <figure>
-              <Image
-                width={1000}
-                height={1000}
-                className='w-full'
-                src='https://placeimg.com/400/225/arch'
-                alt='Shoes'
-              />
-            </figure>
-            <div className='card-body'>
-              <h2 className='card-title'>Fire Alarm Systems</h2>
-              <p>
-                Our company sells, installs, and maintains complete integrated
-                fire alarm systems
-              </p>
-              <div className='card-actions justify-start'>
-                <button className='btn btn-primary'>Read more</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      <section>
-        <div>
+      <section className='px-4 flex flex-col gap-5'>
+        <div className='flex flex-col gap-5'>
           <p className='w-full md:text-start font-bold  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
             Solutions For Your Security
           </p>
-          <p>
+          <p className='text-gray-500'>
             Reduce the probability of crime happening on your property, it will
             reduce or eliminate any liability that falls on you if you can show
             you have solid with security systems in place.
@@ -206,194 +169,10 @@ FEE is a company that provides CCTV products and services for home and business 
         </div>
 
         <div>
-          <ul className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 justify-items-center place-items-center'>
-            <li className='flex justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-rose-800 border-opacity-[0.3] max-h-md hover:bg-rose-800 hover:text-gray-300'>
-              <div className='flex gap-5'>
-                <div className='text-3xl group-hover:text-gray-300 text-rose-800'>
-                  <GiCctvCamera />
-                </div>
-                <div className=' flex flex-col gap-5'>
-                  <div className='flex flex-col gap-2'>
-                    <span className='font-medium text-lg'>Banking Sectors</span>
-                    <span>
-                      Nulla consequat massa quis enim. In enim justo, rhoncus
-                      ut, imperdiet
-                    </span>
-                  </div>
-                  <span className='group-hover:text-gray-300 text-rose-800 font-medium'>
-                    Read more {'>'}
-                  </span>
-                </div>
-              </div>
-            </li>
-
-            <li className='flex justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-rose-800 border-opacity-[0.3] max-h-md hover:bg-rose-800 hover:text-gray-300'>
-              <div className='flex gap-5'>
-                <div className='text-3xl group-hover:text-gray-300 text-rose-800'>
-                  <GiCctvCamera />
-                </div>
-                <div className=' flex flex-col gap-5'>
-                  <div className='flex flex-col gap-2'>
-                    <span className='font-medium text-lg'>
-                      Education Institute
-                    </span>
-                    <span>
-                      Nulla consequat massa quis enim. In enim justo, rhoncus
-                      ut, imperdiet
-                    </span>
-                  </div>
-                  <span className='group-hover:text-gray-300 text-rose-800 font-medium'>
-                    Read more {'>'}
-                  </span>
-                </div>
-              </div>
-            </li>
-
-            <li className='flex justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-rose-800 border-opacity-[0.3] max-h-md hover:bg-rose-800 hover:text-gray-300'>
-              <div className='flex gap-5'>
-                <div className='text-3xl group-hover:text-gray-300 text-rose-800'>
-                  <GiCctvCamera />
-                </div>
-                <div className=' flex flex-col gap-5'>
-                  <div className='flex flex-col gap-2'>
-                    <span className='font-medium text-lg'>Hospitality</span>
-                    <span>
-                      Nulla consequat massa quis enim. In enim justo, rhoncus
-                      ut, imperdiet
-                    </span>
-                  </div>
-                  <span className='group-hover:text-gray-300 text-rose-800 font-medium'>
-                    Read more {'>'}
-                  </span>
-                </div>
-              </div>
-            </li>
-
-            <li className='flex justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-rose-800 border-opacity-[0.3] max-h-md hover:bg-rose-800 hover:text-gray-300'>
-              <div className='flex gap-5'>
-                <div className='text-3xl group-hover:text-gray-300 text-rose-800'>
-                  <GiCctvCamera />
-                </div>
-                <div className=' flex flex-col gap-5'>
-                  <div className='flex flex-col gap-2'>
-                    <span className='font-medium text-lg'>
-                      City Public Area
-                    </span>
-                    <span>
-                      Nulla consequat massa quis enim. In enim justo, rhoncus
-                      ut, imperdiet
-                    </span>
-                  </div>
-                  <span className='group-hover:text-gray-300 text-rose-800 font-medium'>
-                    Read more {'>'}
-                  </span>
-                </div>
-              </div>
-            </li>
-
-            <li className='flex justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-rose-800 border-opacity-[0.3] max-h-md hover:bg-rose-800 hover:text-gray-300'>
-              <div className='flex gap-5'>
-                <div className='text-3xl group-hover:text-gray-300 text-rose-800'>
-                  <GiCctvCamera />
-                </div>
-                <div className=' flex flex-col gap-5'>
-                  <div className='flex flex-col gap-2'>
-                    <span className='font-medium text-lg'>Law Enforcement</span>
-                    <span>
-                      Nulla consequat massa quis enim. In enim justo, rhoncus
-                      ut, imperdiet
-                    </span>
-                  </div>
-                  <span className='group-hover:text-gray-300 text-rose-800 font-medium'>
-                    Read more {'>'}
-                  </span>
-                </div>
-              </div>
-            </li>
-
-            <li className='flex justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-rose-800 border-opacity-[0.3] max-h-md hover:bg-rose-800 hover:text-gray-300'>
-              <div className='flex gap-5'>
-                <div className='text-3xl group-hover:text-gray-300 text-rose-800'>
-                  <GiCctvCamera />
-                </div>
-                <div className=' flex flex-col gap-5'>
-                  <div className='flex flex-col gap-2'>
-                    <span className='font-medium text-lg'>Transportation</span>
-                    <span>
-                      Nulla consequat massa quis enim. In enim justo, rhoncus
-                      ut, imperdiet
-                    </span>
-                  </div>
-                  <span className='group-hover:text-gray-300 text-rose-800 font-medium'>
-                    Read more {'>'}
-                  </span>
-                </div>
-              </div>
-            </li>
-
-            <li className='flex justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-rose-800 border-opacity-[0.3] max-h-md hover:bg-rose-800 hover:text-gray-300'>
-              <div className='flex gap-5'>
-                <div className='text-3xl group-hover:text-gray-300 text-rose-800'>
-                  <GiCctvCamera />
-                </div>
-                <div className=' flex flex-col gap-5'>
-                  <div className='flex flex-col gap-2'>
-                    <span className='font-medium text-lg'>Real Estate</span>
-                    <span>
-                      Nulla consequat massa quis enim. In enim justo, rhoncus
-                      ut, imperdiet
-                    </span>
-                  </div>
-                  <span className='group-hover:text-gray-300 text-rose-800 font-medium'>
-                    Read more {'>'}
-                  </span>
-                </div>
-              </div>
-            </li>
-
-            <li className='flex justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-rose-800 border-opacity-[0.3] max-h-md hover:bg-rose-800 hover:text-gray-300'>
-              <div className='flex gap-5'>
-                <div className='text-3xl group-hover:text-gray-300 text-rose-800'>
-                  <GiCctvCamera />
-                </div>
-                <div className=' flex flex-col gap-5'>
-                  <div className='flex flex-col gap-2'>
-                    <span className='font-medium text-lg'>
-                      Telecom and Media
-                    </span>
-                    <span>
-                      Nulla consequat massa quis enim. In enim justo, rhoncus
-                      ut, imperdiet
-                    </span>
-                  </div>
-                  <span className='group-hover:text-gray-300 text-rose-800 font-medium'>
-                    Read more {'>'}
-                  </span>
-                </div>
-              </div>
-            </li>
-
-            <li className='flex justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-rose-800 border-opacity-[0.3] max-h-md hover:bg-rose-800 hover:text-gray-300'>
-              <div className='flex gap-5'>
-                <div className='text-3xl group-hover:text-gray-300 text-rose-800'>
-                  <GiCctvCamera />
-                </div>
-                <div className=' flex flex-col gap-5'>
-                  <div className='flex flex-col gap-2'>
-                    <span className='font-medium text-lg'>
-                      Shoping & Retail
-                    </span>
-                    <span>
-                      Nulla consequat massa quis enim. In enim justo, rhoncus
-                      ut, imperdiet
-                    </span>
-                  </div>
-                  <span className='group-hover:text-gray-300 text-rose-800 font-medium'>
-                    Read more {'>'}
-                  </span>
-                </div>
-              </div>
-            </li>
+          <ul className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center place-items-center'>
+            {solution_lists?.map((data, index) => (
+              <SolutionForYouCard data={data} key={index} />
+            ))}
           </ul>
         </div>
       </section>
@@ -407,44 +186,23 @@ FEE is a company that provides CCTV products and services for home and business 
         </section>
       </section>
 
-      <section className='w-screen bg-rose-800 text-gray-300 flex flex-col gap-10 py-10'>
-        <div>
+      <section className='w-screen px-4 bg-rose-800 text-gray-300 flex flex-col gap-10 py-5'>
+        <div className='flex flex-col gap-5'>
           <p className='w-full text-gray-300 md:text-start font-bold  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
             More Reasons to Choose Us!
           </p>
 
           <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
-              <IoMdCheckmarkCircle />
-              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
-            </li>
-            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
-              <IoMdCheckmarkCircle />
-              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
-            </li>
-            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
-              <IoMdCheckmarkCircle />
-              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
-            </li>
-            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
-              <IoMdCheckmarkCircle />
-              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
-            </li>
-            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
-              <IoMdCheckmarkCircle />
-              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
-            </li>
-            <li className='flex gap-1 justify-center w-full md:max-w-md duration-700 transition-shadow items-center p-5 border-[0.3px] group border-gray-300 border-opacity-[0.3] max-h-md  hover:text-black z-[100]'>
-              <IoMdCheckmarkCircle />
-              <span className='font-medium text-lg'>Alarm Monitoring 24/7</span>
-            </li>
+            {choose_us_data?.map((data, index) => (
+              <ChooseUsCard key={index} data={data} />
+            ))}
           </ul>
         </div>
 
         <div className='w-full flex flex-col lg:flex-row justify-around gap-5'>
           <div className='max-w-lg divide-y divide-gray-400'>
             <div className='flex flex-col gap-5 pb-5'>
-              <p className='text-2xl font-bold'>
+              <p className='text-3xl font-bold'>
                 From Door And Window Sensors To Mobile Apps And Cameras System!
               </p>
               <p>
@@ -466,8 +224,8 @@ FEE is a company that provides CCTV products and services for home and business 
                 thermostats.
               </p>
             </div>
-            <div className='flex gap-5 pt-5'>
-              <div className='max-w-[16rem] flex flex-col gap-2'>
+            <div className='flex flex-col md:flex-row gap-5 pt-5'>
+              <div className='w-full md:max-w-[16rem] flex flex-col gap-2'>
                 <ImCheckmark className='text-2xl' />
                 <p className='font-bold'>Increase Security Scope</p>
                 <p>
@@ -475,7 +233,7 @@ FEE is a company that provides CCTV products and services for home and business 
                   each guard view many areas.
                 </p>
               </div>
-              <div className='max-w-[16rem] flex flex-col gap-2'>
+              <div className='w-full md:max-w-[16rem] flex flex-col gap-2'>
                 <ImCheckmark className='text-2xl' />
                 <p className='font-bold'>Reduce Business Liability</p>
                 <p>
@@ -613,6 +371,12 @@ FEE is a company that provides CCTV products and services for home and business 
                     className='input w-full rounded-none md:w-[15rem]'
                   />
                 </div>
+              </div>
+
+              <div>
+                <button className='btn btn-primary rounded-none bg-rose-800 border-rose-800 active:bg-transparent hover:bg-rose-900 hover:border-rose-800'>
+                  Submit Information
+                </button>
               </div>
             </form>
           </div>
