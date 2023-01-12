@@ -16,12 +16,12 @@ const Navbar = (): JSX.Element => {
         </span>
 
         {/* Desktop Menu */}
-        <ul className='hidden md:flex gap-1'>
-          <li className='text-rose-800 font-bold'>Home</li>
-          <li>About</li>
-          <li>Gallery</li>
-          <li>Service</li>
-          <li>Contact us</li>
+        <ul className='hidden md:flex gap-2 font-bold items-center'>
+          <li className='text-lg text-rose-800'>Home</li>
+          <li className='text-lg'>About</li>
+          <li className='text-lg'>Gallery</li>
+          <li className='text-lg'>Service</li>
+          <li className='text-lg'>Contact us</li>
         </ul>
 
         {/* Menu Button */}

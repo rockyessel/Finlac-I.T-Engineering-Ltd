@@ -269,30 +269,19 @@ const data = [
   },
 ];
 
-const ActiveDisplay = (): JSX.Element => {
+const ActiveDisplay: React.FC = (): JSX.Element => {
+    
   const router = useRouter();
 
   const { feature } = router?.query;
 
-  switch (feature || 'ACS') {
-    case 'ACS':
-      return <Display />;
-    case 'AS':
-      return <Display />;
-    case 'RM':
-      return <Display />;
-    case 'RVA':
-      return <Display />;
-    case 'IPV':
-      return <Display />;
-    case 'VV':
-      return <Display />;
-    case 'CM':
-      return <Display />;
-    case 'DC':
-      return <Display />;
-    case 'SPS':
-      return <Display />;
+  const check = feature || 'ACS';
+
+  const filtered_data = data.filter((data) => data.abbre_title === check)[0];
+
+  switch (check) {
+    case `${check}`:
+      return <Display {...filtered_data} />;
 
     default:
       return (

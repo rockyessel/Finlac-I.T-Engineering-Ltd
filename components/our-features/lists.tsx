@@ -2,6 +2,7 @@ import React from 'react';
 import { GiCctvCamera } from 'react-icons/gi';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { features } from 'process';
 
 interface Props {
   data: {
@@ -26,18 +27,23 @@ const Lists = ({ data }: Props): JSX.Element => {
       undefined,
       { shallow: true }
     );
-
-    set_String('');
   };
 
+  const feature = router?.query?.feature;
+
+  const check = data?.abbrev || 'ACS';
+
+  const if_true = feature === check;
+
   return (
-    <li className='cursor-pointer hover:bg-rose-800 hover:text-gray-300 py-3 px-5'>
-      <button
-        className='inline-flex items-center gap-1'
-        onClick={() => handleStringChange(`${data?.abbrev}`)}
-      >
-        <GiCctvCamera /> <span>{data?.title}</span>
-      </button>
+    <li
+      onClick={() => handleStringChange(`${data?.abbrev}`)}
+      className={`w-full h-full inline-flex items-center gap-1 cursor-pointer hover:bg-rose-800 hover:text-gray-300 py-3 px-5 ${
+        if_true ? 'text-rose-800' : ''
+      }`}
+    >
+      <GiCctvCamera />
+      <span>{data?.title}</span>
     </li>
   );
 };

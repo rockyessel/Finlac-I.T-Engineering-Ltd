@@ -85,6 +85,7 @@ const cctv_manufacturer = [
 const Home = () => {
   return (
     <main className='text-black bg-gray-100 overflow-x-hidden pb-10 flex flex-col gap-16'>
+      <ScreenButton />
       <Header
         description={`FEE is a company that provides CCTV products and services for home and business surveillance. They have a team of experts who can help customers find the best solution for their needs, whether it's a single security camera or a comprehensive CCTV system.`}
         title={'Home | FINLAC IT & ENG. LTD.'}
@@ -102,7 +103,7 @@ const Home = () => {
 
       <section
         id='container'
-        className={`w-full h-auto flex justify-between items-center px-4`}
+        className={`w-full h-auto flex justify-between items-center px-4 overflow-hidden`}
       >
         {cctv_manufacturer?.map((image, index) => (
           <Image
@@ -186,7 +187,7 @@ const Home = () => {
         </section>
       </section>
 
-      <section className='w-screen px-4 bg-rose-800 text-gray-300 flex flex-col gap-10 py-5'>
+      <section className='w-screen px-4 bg-rose-800 text-gray-300 flex flex-col gap-20 py-5'>
         <div className='flex flex-col gap-5'>
           <p className='w-full text-gray-300 md:text-start font-bold  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
             More Reasons to Choose Us!
@@ -198,7 +199,7 @@ const Home = () => {
             ))}
           </ul>
         </div>
-
+        <hr className='w-full z-[100] px-16' />
         <div className='w-full flex flex-col lg:flex-row justify-around gap-5'>
           <div className='max-w-lg divide-y divide-gray-400'>
             <div className='flex flex-col gap-5 pb-5'>
@@ -210,7 +211,7 @@ const Home = () => {
                 passionate about providing the best security system services and
                 solutions you an ever find.
               </p>
-              <div className='flex gap-4'>
+              <div className='flex flex-wrap gap-4'>
                 <button className='btn btn-primary rounded-none bg-gray-400 text-gray-50 border-rose-800 active:bg-transparent hover:bg-rose-900 hover:border-gray-400'>
                   Check Products
                 </button>
@@ -382,6 +383,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <label htmlFor='my-modal' className='btn'>
+        open modal
+      </label>
     </main>
   );
 };

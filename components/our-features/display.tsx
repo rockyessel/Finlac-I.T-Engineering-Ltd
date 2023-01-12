@@ -1,22 +1,31 @@
 import React from 'react';
 import AccordionCard from '../accordion-card';
 
-const Display = () => {
+export interface AccordionProps {
+  question: string;
+  answer: string;
+}
+
+interface DisplayProps {
+  title: string;
+  abbre_title: string;
+  sub_title: string;
+  sub_description: string;
+  description: string;
+  accordion: AccordionProps[];
+}
+
+const Display = (props: DisplayProps) => {
   return (
     <div className='flex flex-col gap-5'>
-      <p className='font-bold text-3xl'>High-Quality Safe and Secure Access</p>
+      <p className='font-bold text-3xl'>{props?.sub_title}</p>
       <span className='text-gray-500 font-extralight'>
-        Keep safe your home with authorized personal safe and secure access
+        {props?.sub_description}
       </span>
-      <p className='font-medium'>
-        Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
-        Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
-        venenatis faucibus. In enim justo, rhoncus ut, imperdiet a, venenatis
-        vitae, justo.
-      </p>
+      <p className='font-medium'>{props?.description}</p>
 
-      <div>
-        <AccordionCard />
+      <div className='w-full flex flex-col group overflow-hidden'>
+        <AccordionCard data={props?.accordion} />
       </div>
     </div>
   );
