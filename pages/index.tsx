@@ -7,6 +7,7 @@ import {
   ChooseUsCard,
   OurFeatures,
   ScreenButton,
+  Sponsors,
   SolutionForYouCard,
 } from '../components';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
@@ -69,13 +70,6 @@ const solution_lists = [
   },
 ];
 
-const cctv_manufacturer = [
-  { image: '/flir.png' },
-  { image: '/hik.png' },
-  { image: '/van.png' },
-  { image: '/vicon.png' },
-  { image: '/ava.png' },
-];
 
 const hero_section_data = [
   {
@@ -133,21 +127,7 @@ const Home = () => {
       />
       <Hero />
 
-      <section
-        id='container'
-        className={`w-full h-auto flex justify-between items-center px-4 overflow-hidden`}
-      >
-        {cctv_manufacturer?.map((image, index) => (
-          <Image
-            key={index}
-            width={1000}
-            height={1000}
-            className={`w-full h-12 md:w-64 z-[100] items`}
-            src={image?.image}
-            alt={image?.image}
-          />
-        ))}
-      </section>
+      <Sponsors />
 
       <section className='w-full flex flex-col justify-center items-center gap-10 lg:flex-row'>
         <div className='z-[100] px-4 w-full lg:w-[50%] h-full flex- flex-col gap-5 justify-center'>

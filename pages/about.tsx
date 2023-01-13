@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero, ScreenButton } from '../components/index';
+import { Hero, ScreenButton, Sponsors } from '../components/index';
 import Image from 'next/image';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
 import Header from '../components/header';
@@ -7,7 +7,7 @@ import { AiOutlineArrowDown } from 'react-icons/ai';
 
 const About = () => {
   return (
-    <main className='flex flex-col gap-10'>
+    <main className='flex flex-col gap-10 py-10'>
       <Header
         description={`FEE is a company that provides CCTV products and services for home and business surveillance. They have a team of experts who can help customers find the best solution for their needs, whether it's a single security camera or a comprehensive CCTV system.`}
         title={'About us | FINLAC IT & ENG. LTD.'}
@@ -23,10 +23,11 @@ const About = () => {
       />
       <ScreenButton />
       <Hero />
+      <Sponsors />
 
       <section className='grid grid-cols-1 lg:grid-cols-2 h-full w-full gap-10 py-5 px-4'>
         <Image
-          className='h-[25.5rem] w-full object-cover object-center rounded-md'
+          className='h-[25.5rem] w-full object-cover object-center rounded-md shadow-md'
           src='https://images.unsplash.com/photo-1600132806277-725b2e67ff38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80'
           width={1000}
           height={1000}
@@ -105,7 +106,9 @@ const About = () => {
 
       <section className='w-full h-full flex flex-col lg:flex-row'>
         <div className='bg-rose-800 text-gray-300 w-full lg:w-1/2 h-auto px-4 flex flex-col gap-2 py-5'>
-          <span className='text-sm uppercase'>Cameras & Security Systems</span>
+          <span className='text-sm uppercase font-bold'>
+            Cameras & Security Systems
+          </span>
           <p className='text-xl w-full md:text-2xl lg:text-3xl font-bold z-[100] lg:max-w-lg'>
             Experience, Expertise and Honesty
           </p>
@@ -170,7 +173,7 @@ const About = () => {
         </div>
 
         <div className='bg-gray-300 text-rose-800 w-full lg:w-1/2 h-auto px-4 flex flex-col gap-2 py-5'>
-          <span className='text-sm uppercase'>
+          <span className='text-sm uppercase font-bold'>
             Houses and Business security
           </span>
           <p className='text-xl w-full md:text-2xl lg:text-3xl font-bold z-[100] lg:max-w-lg'>
@@ -190,6 +193,117 @@ const About = () => {
           <button className='btn btn-primary rounded-none bg-rose-800 border-rose-800 active:bg-transparent hover:bg-rose-900 hover:border-rose-800'>
             View Products Here!
           </button>
+        </div>
+      </section>
+
+      <section className='flex flex-col gap-5 px-4 lg:flex-row'>
+        <div className='w-full h-full lg:w-2/5'>
+          <Image
+            className='rounded-md shadow-md h-[20rem] lg:h-[31rem] object-center object-cover'
+            src='https://images.unsplash.com/photo-1570126618953-d437176e8c79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=794&q=80'
+            width={1000}
+            height={1000}
+            alt=''
+          />
+        </div>
+
+        <div className='flex flex-col gap-5 lg:max-w-3xl'>
+          <div className='flex flex-col gap-2'>
+            <span className='text-sm font-bold text-rose-800 uppercase'>
+              Get in touch
+            </span>
+            <p className='text-xl w-full md:text-2xl lg:text-3xl font-bold z-[100] lg:max-w-3xl text-black'>
+              Get A Free Risk Assessment Of Your Home By Our Security Expert
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididu labore et dolore magna aliqua. Quis ipsum
+              suspendisse ultrices gravida.
+            </p>
+          </div>
+
+          <form className='flex flex-col gap-2'>
+            <div className='flex flex-col md:flex-row md:justify-between'>
+              <div className='flex flex-col gap-1'>
+                <label>Full name</label>
+                <input
+                  className='input input-bordered w-full'
+                  title='full name'
+                  type='text'
+                />
+              </div>
+
+              <div className='flex flex-col gap-1'>
+                <label>Full name</label>
+                <select
+                  className='select select-bordered'
+                  title='city'
+                  name='city'
+                >
+                  <option value='Sunyani'>Sunyani</option>
+                  <option value='Accra'>Accra</option>
+                  <option value='Kumasi'>Kumasi</option>
+                  <option value='Tamale'>Tamale</option>
+                  <option value='Sekondi'>Sekondi</option>
+                  <option value='Obuase'>Obuase</option>
+                  <option value='Tema'>Tema</option>
+                  <option value='Cape Coast'>Cape Coast</option>
+                  <option value='Koforidua'>Koforidua</option>
+                  <option value='Ho'>Ho</option>
+                  <option value='Wa'>Wa</option>
+                  <option value='Bawku'>Bawku</option>
+                  <option value='Sunyani'>Sunyani</option>
+                  <option value='Bolgatanga'>Bolgatanga</option>
+                  <option value='Aflao'>Aflao</option>
+                  <option value='Nkawkaw'>Nkawkaw</option>
+                  <option value='Hohoe'>Hohoe</option>
+                  <option value='Winneba'>Winneba</option>
+                  <option value='Berekum'>Berekum</option>
+                  <option value='Techniman'>Techniman</option>
+                  <option value='Sefwi Wiawso'>Sefwi Wiawso</option>
+                  <option value='Goaso'>Goaso</option>
+                  <option value='Dambai'>Dambai</option>
+                  <option value='Damongo'>Damongo</option>
+                </select>
+              </div>
+
+              <div className='flex flex-col gap-1'>
+                <label>Phone No.#</label>
+                <input
+                  className='input input-bordered w-full'
+                  title='phone number'
+                  type='text'
+                />
+              </div>
+            </div>
+
+            <div>
+              <div className='flex flex-col gap-1'>
+                <label>Address</label>
+                <input
+                  className='input input-bordered w-full'
+                  title='full name'
+                  type='text'
+                />
+              </div>
+
+              <div className='flex flex-col gap-1'>
+                <label>Write Message</label>
+                <textarea
+                  className='textarea textarea-bordered'
+                  title='Message'
+                  name='message'
+                  id=''
+                />
+              </div>
+            </div>
+
+            <div>
+              <button className='btn btn-primary rounded-none bg-rose-800 border-rose-800 active:bg-transparent hover:bg-rose-900 hover:border-rose-800'>
+                submit here!
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
