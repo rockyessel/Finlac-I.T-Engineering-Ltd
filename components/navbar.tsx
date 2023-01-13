@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Navbar = (): JSX.Element => {
   const [showMenu, setShowMenu] = React.useState<boolean>(false);
@@ -9,7 +10,7 @@ const Navbar = (): JSX.Element => {
   };
 
   return (
-    <div className='z-[2] shadow-lg bg-gray-900 bg-opacity-[0.3] px-4 w-full h-auto fixed'>
+    <div className='z-[200] shadow-lg bg-rose-800 px-4 w-full h-auto fixed'>
       <div className='container mx-auto flex justify-between items-center w-full h-20 text-gray-300 '>
         <span className='font-bold text-3xl z-[2]'>
           FEE<span className='text-4xl text-red-500'>.</span>{' '}
@@ -17,11 +18,17 @@ const Navbar = (): JSX.Element => {
 
         {/* Desktop Menu */}
         <ul className='hidden md:flex gap-2 font-bold items-center'>
-          <li className='text-lg text-rose-800'>Home</li>
-          <li className='text-lg'>About</li>
+          <Link href='/'>
+            <li className='text-lg'>Home</li>
+          </Link>
+          <Link href='/about'>
+            <li className='text-lg'>About</li>
+          </Link>
           <li className='text-lg'>Gallery</li>
           <li className='text-lg'>Service</li>
-          <li className='text-lg'>Contact us</li>
+          <Link href='/book'>
+            <li className='text-lg'>Contact us</li>
+          </Link>
         </ul>
 
         {/* Menu Button */}
@@ -52,9 +59,9 @@ const Navbar = (): JSX.Element => {
         )}
         {/* Mobile Menu */}
         {showMenu && (
-          <div className='transition-all duration-400 md:hidden bg-gray-900 bg-opacity-[0.9] flex justify-end items-center absolute top-0 left-0 w-full h-screen overflow-hidden'>
-            <div className='flex flex-col pt-20 pl-5 items-start gap-8 bg-gray-900 w-[280px] h-screen'>
-              <ul className='flex flex-col uppercase divide-gray-800 items-start gap-8 bg-gray-900 w-full h-full'>
+          <div className='transition-all duration-400 md:hidden bg-rose-900 bg-opacity-[0.7] flex justify-end items-center absolute top-0 left-0 w-full h-screen overflow-hidden'>
+            <div className='flex flex-col pt-20 pl-5 items-start gap-8 bg-rose-800 w-[280px] h-screen'>
+              <ul className='flex flex-col uppercase divide-gray-800 items-start gap-8 bg-rose-800 w-full h-full'>
                 <li className='inline-flex justify-start items-center gap-2  hover:text-gray-500  duration-700 cursor-pointer w-full li text-center hover:border-none'>
                   <div>
                     <span className='font-extrabold text-gray-200'>01</span>.

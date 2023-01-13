@@ -7,6 +7,7 @@ const nextConfig = {
       'template66389.motopreview.com',
       'placeimg.com',
       'images.unsplash.com',
+      'kanni.wpengine.com',
     ],
   },
 };

@@ -1,13 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import HeroSection from '../components/hero-section';
-import Navbar from '../components/navbar';
 import Header from '../components/header';
 import Hero from '../components/hero';
-import Footer from '../components/footer';
 import { AiOutlineArrowDown } from 'react-icons/ai';
-import { GiCctvCamera } from 'react-icons/gi';
-import AccordionCard from '../components/accordion-card';
 import {
   ChooseUsCard,
   OurFeatures,
@@ -82,6 +77,43 @@ const cctv_manufacturer = [
   { image: '/ava.png' },
 ];
 
+const hero_section_data = [
+  {
+    type: 'home',
+    title: 'Unique & Powerful Security Solutions',
+    image:
+      'https://images.unsplash.com/photo-1565591452825-67d6b7df1d47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1026&q=800',
+    description: `We provide security requirements of residential, commercial and other clients, with the largest assortment of security cameras and alarm systems installation.`,
+    button: [
+      {
+        name: 'contact us now!',
+        link: '/contact',
+      },
+      {
+        name: 'more about us!',
+        link: '/about',
+      },
+    ],
+  },
+  {
+    type: 'about',
+    title: 'Unique & Powerful Security Solutions',
+    image:
+      'https://images.unsplash.com/photo-1626451630621-59a91897b93b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80',
+    description: `For the Security and IT directors ensuring our places of work and leisure are safe.We always understand that in a complex world, it is not enough to solve the challenges of today.`,
+    button: [
+      {
+        name: 'protect my home',
+        link: '/contact',
+      },
+      {
+        name: 'how we do it',
+        link: '/about',
+      },
+    ],
+  },
+];
+
 const Home = () => {
   return (
     <main className='text-black bg-gray-100 overflow-x-hidden pb-10 flex flex-col gap-16'>
@@ -117,7 +149,7 @@ const Home = () => {
         ))}
       </section>
 
-      <section className='w-full flex flex-col gap-10 lg:flex-row'>
+      <section className='w-full flex flex-col justify-center items-center gap-10 lg:flex-row'>
         <div className='z-[100] px-4 w-full lg:w-[50%] h-full flex- flex-col gap-5 justify-center'>
           <h2 className='text-xl w-full md:text-2xl lg:text-3xl font-bold z-[100] lg:max-w-lg'>
             From Door And Window Sensors To Mobile Apps And Cameras System!
@@ -144,7 +176,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className='relative w-full h-full'>
+        <div className='relative w-full md:w-1/2 h-full md:h-[30rem]'>
           <div className='w-full h-[20rem] md:h-full before:block before:absolute before:bg-gray-100 before:h-32 before:w-64 before:z-[1] before:-rotate-[45deg] before:-top-[2.5rem] before:-left-[5.5rem] relative'>
             <Image
               className='object-center object-cover w-full h-full'
@@ -189,7 +221,7 @@ const Home = () => {
         </section>
       </section>
 
-      <section className='w-screen px-4 bg-rose-800 text-gray-300 flex flex-col gap-20 py-5'>
+      <section className='w-screen z-[103] px-4 bg-rose-800 text-gray-300 flex flex-col gap-20 py-5'>
         <div className='flex flex-col gap-5'>
           <p className='text-xl w-full md:text-2xl lg:text-3xl font-bold z-[100] lg:max-w-lg text-gray-300'>
             More Reasons to Choose Us!
@@ -201,7 +233,9 @@ const Home = () => {
             ))}
           </ul>
         </div>
+
         <hr className='w-full z-[100] px-16' />
+
         <div className='w-full flex flex-col lg:flex-row justify-around gap-5'>
           <div className='max-w-lg divide-y divide-gray-400'>
             <div className='flex flex-col gap-5 pb-5'>

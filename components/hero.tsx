@@ -9,7 +9,7 @@ const Hero = () => {
         backgroundImage: `url("https://images.unsplash.com/photo-1565591452825-67d6b7df1d47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1026&q=800")`,
       }}
     >
-      <div className=' w-full h-full bg-black bg-opacity-70'>
+      <div className='w-full h-full bg-black bg-opacity-70'>
         <div className='w-full h-full text-neutral-content flex flex-col justify-center text-left'>
           <div className='w-full flex flex-col px-4 gap-4 md:gap-10 md:px-16'>
             <p>
