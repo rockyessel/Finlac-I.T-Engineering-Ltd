@@ -42,7 +42,7 @@ const ContactUs = () => {
     },
   ];
 
-  const help_data:{question:string, answer:string}[] = [
+  const help_data: { question: string; answer: string }[] = [
     {
       question: 'What is CCTV and how does it work?',
       answer: `CCTV stands for closed-circuit television and is a system of video cameras used for surveillance. These cameras capture footage which is then transmitted to a monitor or set of monitors for viewing.`,
@@ -263,7 +263,7 @@ const ContactUs = () => {
         </div>
       </section>
 
-      <section className='px-4'>
+      <section className='px-4 flex-col gap-4'>
         <section>
           <p className='text-xl w-full md:text-2xl lg:text-3xl font-bold z-[100] lg:max-w-lg'>
             Here are some FAQs to help you.
@@ -275,12 +275,8 @@ const ContactUs = () => {
           </p>
         </section>
 
-        <section>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:justify-items-center gap-5'>
-            {help_data?.map((data, index) => (
-              <AccordionCard key={index} data={data} />
-            ))}
-          </div>
+        <section className=''>
+          <AccordionCard data={help_data} />
         </section>
       </section>
     </div>

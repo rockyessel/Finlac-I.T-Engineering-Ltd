@@ -23,10 +23,6 @@ const Navbar = (): JSX.Element => {
       url: '/services',
     },
     {
-      name: 'Bookings',
-      url: '/bookings',
-    },
-    {
       name: 'Contact us',
       url: '/contact-us',
     },
@@ -89,7 +85,10 @@ const Navbar = (): JSX.Element => {
               <ul className='flex flex-col uppercase divide-gray-800 items-start gap-8 bg-rose-800 w-full h-full'>
                 {menuLink.map((link, index) => (
                   <Link key={index} href={link?.url}>
-                    <li className='inline-flex justify-start items-center gap-2  hover:text-gray-500  duration-700 cursor-pointer w-full li text-center hover:border-none'>
+                    <li
+                      onClick={handleState}
+                      className='inline-flex justify-start items-center gap-2  hover:text-gray-500  duration-700 cursor-pointer w-full li text-center hover:border-none'
+                    >
                       <div>
                         <span className='font-extrabold text-gray-200'>
                           0{index + 1}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 
 interface Props {
@@ -8,10 +9,15 @@ interface Props {
   }[];
 }
 
-const AccordionCard = (props: any) => {
+const AccordionCard = (props: Props) => {
   const [clicked, setClicked] = React.useState<number | null>(0 || null);
 
-  console.log(props);
+  const isTrue: string =
+    useRouter().asPath.split('/')[1] === 'contact-us'
+      ? 'grid grid-cols-1 md:grid-cols-2 gap-5 text-md  divide-y divide-rose-200 '
+      : 'w-full flex divide-y divide-rose-200 flex-col gap-5 text-xl';
+
+  console.log(isTrue);
 
   const toggle = (index: number) => {
     if (clicked === index) {
@@ -22,15 +28,15 @@ const AccordionCard = (props: any) => {
   };
 
   return (
-    <ul className='w-full flex divide-y flex-col gap-5'>
+    <ul className={`${isTrue}`}>
       {props?.data?.map((data, index) => (
         <li key={index}>
           <button
             onClick={() => toggle(index)}
-            className='w-full flex items-center justify-between'
+            className='w-full flex text-left justify-between'
           >
             <h1
-              className={`hover:text-rose-800 font-extrabold text-xl ${
+              className={`hover:text-rose-800 font-medium ${
                 clicked === index ? 'text-rose-800' : ''
               }`}
             >
