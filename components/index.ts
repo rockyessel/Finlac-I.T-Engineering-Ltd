@@ -4,3 +4,6 @@ export { default as ChooseUsCard } from '../components/choose-us-card';
 export { default as SolutionForYouCard } from '../components/solution-for-you-card';
 export { default as Hero } from './hero';
 export { default as Sponsors } from './sponsors';
+export { default as Testimonials } from './testimonials';
+export { default as ServiceCard } from './services-card';
+export { default as AccordionCard } from './accordion-card';

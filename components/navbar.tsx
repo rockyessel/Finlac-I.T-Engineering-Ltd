@@ -9,6 +9,29 @@ const Navbar = (): JSX.Element => {
     setShowMenu((prev) => !prev);
   };
 
+  const menuLink = [
+    {
+      name: 'Home',
+      url: '/',
+    },
+    {
+      name: 'About',
+      url: '/about',
+    },
+    {
+      name: 'Services',
+      url: '/services',
+    },
+    {
+      name: 'Bookings',
+      url: '/bookings',
+    },
+    {
+      name: 'Contact us',
+      url: '/contact-us',
+    },
+  ];
+
   return (
     <div className='z-[200] shadow-lg bg-rose-800 px-4 w-full h-auto fixed'>
       <div className='container mx-auto flex justify-between items-center w-full h-20 text-gray-300 '>
@@ -18,19 +41,19 @@ const Navbar = (): JSX.Element => {
 
         {/* Desktop Menu */}
         <ul className='hidden md:flex gap-2 font-bold items-center'>
-          <Link href='/'>
-            <li className='text-lg'>Home</li>
-          </Link>
-          <Link href='/about'>
-            <li className='text-lg'>About</li>
-          </Link>
-          <li className='text-lg'>Gallery</li>
-          <Link href='/services'>
-            <li className='text-lg'>Service</li>
-          </Link>
-          <Link href='/book'>
-            <li className='text-lg'>Contact us</li>
-          </Link>
+          {menuLink.map((link, index) => (
+            <Link key={index} href={link?.url}>
+              <li className='inline-flex justify-start items-center gap-2  hover:text-gray-500  duration-700 cursor-pointer w-full li text-center hover:border-none'>
+                <div>
+                  <span className='font-extrabold text-gray-200'>
+                    0{index + 1}
+                  </span>
+                  .
+                </div>
+                {link?.name}
+              </li>
+            </Link>
+          ))}
         </ul>
 
         {/* Menu Button */}
@@ -64,62 +87,19 @@ const Navbar = (): JSX.Element => {
           <div className='transition-all duration-400 md:hidden bg-rose-900 bg-opacity-[0.7] flex justify-end items-center absolute top-0 left-0 w-full h-screen overflow-hidden'>
             <div className='flex flex-col pt-20 pl-5 items-start gap-8 bg-rose-800 w-[280px] h-screen'>
               <ul className='flex flex-col uppercase divide-gray-800 items-start gap-8 bg-rose-800 w-full h-full'>
-                <Link href='/'>
-                  <li className='inline-flex justify-start items-center gap-2  hover:text-gray-500  duration-700 cursor-pointer w-full li text-center hover:border-none'>
-                    <div>
-                      <span className='font-extrabold text-gray-200'>01</span>.
-                    </div>
-                    Home
-                  </li>
-                </Link>
-
-                <Link href='/about'>
-                  <li
-                    onClick={handleState}
-                    className='inline-flex justify-start  items-center gap-2 hover:text-gray-500 hover:font-medium  duration-700 cursor-pointer w-full li text-center hover:border-none'
-                  >
-                    <div>
-                      <span className='font-extrabold text-gray-200'>02</span>.
-                    </div>
-                    About
-                  </li>
-                </Link>
-
-                <Link href='/services'>
-                  <li
-                    onClick={handleState}
-                    className='inline-flex justify-start  items-center gap-2 hover:text-gray-500 hover:font-medium  duration-700 cursor-pointer w-full li text-center hover:border-none'
-                  >
-                    <div>
-                      <span className='font-extrabold text-gray-200'>03</span>.
-                    </div>
-                    Services
-                  </li>
-                </Link>
-
-                <Link href='/bookings'>
-                  <li
-                    onClick={handleState}
-                    className='inline-flex justify-start  items-center gap-2 hover:text-gray-500 hover:font-medium  duration-700 cursor-pointer w-full li text-center hover:border-none'
-                  >
-                    <div>
-                      <span className='font-extrabold text-gray-200'>04</span>.
-                    </div>
-                    Bookings
-                  </li>
-                </Link>
-
-                <Link href='/contact-us'>
-                  <li
-                    onClick={handleState}
-                    className='inline-flex justify-start  items-center gap-2 hover:text-gray-500 hover:font-medium  duration-700 cursor-pointer w-full li text-center hover:border-none'
-                  >
-                    <div>
-                      <span className='font-extrabold text-gray-200'>05</span>.
-                    </div>
-                    Contact us
-                  </li>
-                </Link>
+                {menuLink.map((link, index) => (
+                  <Link key={index} href={link?.url}>
+                    <li className='inline-flex justify-start items-center gap-2  hover:text-gray-500  duration-700 cursor-pointer w-full li text-center hover:border-none'>
+                      <div>
+                        <span className='font-extrabold text-gray-200'>
+                          0{index + 1}
+                        </span>
+                        .
+                      </div>
+                      {link?.name}
+                    </li>
+                  </Link>
+                ))}
               </ul>
 
               <div>

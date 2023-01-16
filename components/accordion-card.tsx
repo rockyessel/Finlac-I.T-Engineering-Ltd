@@ -8,8 +8,10 @@ interface Props {
   }[];
 }
 
-const AccordionCard = (props: Props) => {
+const AccordionCard = (props: any) => {
   const [clicked, setClicked] = React.useState<number | null>(0 || null);
+
+  console.log(props);
 
   const toggle = (index: number) => {
     if (clicked === index) {

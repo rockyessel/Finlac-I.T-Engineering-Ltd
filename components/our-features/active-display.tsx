@@ -270,7 +270,6 @@ const data = [
 ];
 
 const ActiveDisplay: React.FC = (): JSX.Element => {
-    
   const router = useRouter();
 
   const { feature } = router?.query;

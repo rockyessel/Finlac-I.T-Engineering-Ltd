@@ -9,6 +9,7 @@ import {
   ScreenButton,
   Sponsors,
   SolutionForYouCard,
+  Testimonials,
 } from '../components';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
 import { ImCheckmark } from 'react-icons/im';
@@ -69,7 +70,6 @@ const solution_lists = [
       'Nulla consequat massa quis enim. In enim justo, rhoncus ut, imperdiet',
   },
 ];
-
 
 const hero_section_data = [
   {
@@ -399,6 +399,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Testimonials />
     </main>
   );
 };

@@ -234,7 +234,7 @@ const About = () => {
               </div>
 
               <div className='flex flex-col gap-1'>
-                <label>Full name</label>
+                <label>Select your city</label>
                 <select
                   className='select select-bordered'
                   title='city'
