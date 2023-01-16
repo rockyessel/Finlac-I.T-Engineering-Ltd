@@ -10,6 +10,7 @@ import {
   Sponsors,
   SolutionForYouCard,
   Testimonials,
+  Form,
 } from '../components';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
 import { ImCheckmark } from 'react-icons/im';
@@ -401,6 +402,9 @@ const Home = () => {
       </section>
 
       <Testimonials />
+      <section className='text-black flex justify-center items-center'>
+        <Form />
+      </section>
     </main>
   );
 };

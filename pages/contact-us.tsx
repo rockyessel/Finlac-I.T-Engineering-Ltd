@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero, AccordionCard } from '../components';
+import { Hero, AccordionCard, ScreenButton } from '../components';
 import { MdOutlineMapsHomeWork, MdPhoneCallback } from 'react-icons/md';
 
 const ContactUs = () => {
@@ -123,6 +123,7 @@ const ContactUs = () => {
 
   return (
     <div className='w-full h-full flex flex-col gap-10 mb-5'>
+      <ScreenButton />
       <Hero />
       <section className='w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center place-items-center gap-5 px-4'>
         {contact_data?.map((data, index) => (

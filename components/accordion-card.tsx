@@ -17,8 +17,6 @@ const AccordionCard = (props: Props) => {
       ? 'grid grid-cols-1 md:grid-cols-2 gap-5 text-md  divide-y divide-rose-200 '
       : 'w-full flex divide-y divide-rose-200 flex-col gap-5 text-xl';
 
-  console.log(isTrue);
-
   const toggle = (index: number) => {
     if (clicked === index) {
       return setClicked(null);

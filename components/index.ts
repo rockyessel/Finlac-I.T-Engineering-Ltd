@@ -7,3 +7,4 @@ export { default as Sponsors } from './sponsors';
 export { default as Testimonials } from './testimonials';
 export { default as ServiceCard } from './services-card';
 export { default as AccordionCard } from './accordion-card';
+export { default as Form } from './form';
