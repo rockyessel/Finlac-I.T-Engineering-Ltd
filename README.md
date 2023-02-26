@@ -1,4 +1,6 @@
 # Introduction
+![y](https://user-images.githubusercontent.com/97303710/221442633-d93491d2-65d5-4612-a919-ee1bc5888de4.png)
+
 
 Finlac IT & Engineering is a CCTV website that allows customers to contact professionals for help with the installation or repair of CCTV systems. This documentation provides an overview of the project, including the tools used, features added, and any challenges faced during development.
 
