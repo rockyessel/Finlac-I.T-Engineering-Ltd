@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Introduction
+![y](https://user-images.githubusercontent.com/97303710/221442633-d93491d2-65d5-4612-a919-ee1bc5888de4.png)
 
-## Getting Started
 
-First, run the development server:
+Finlac IT & Engineering is a CCTV website that allows customers to contact professionals for help with the installation or repair of CCTV systems. This documentation provides an overview of the project, including the tools used, features added, and any challenges faced during development.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+# Tools and Technologies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project was built using the following tools and technologies:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+TailwindCSS - a utility-first CSS framework used for styling the website.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Next.js - a React-based framework used for building server-side rendered web applications.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Sanity.io - a headless CMS (Content Management System) used to manage the content of the website.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+TailwindCSS was chosen for its ease of use and flexibility in styling web pages. Next.js was chosen for its performance and ability to provide server-side rendering for improved SEO. Sanity.io was chosen for its user-friendly interface and ease of use in managing website content.
 
-## Learn More
+# Features
 
-To learn more about Next.js, take a look at the following resources:
+The following features were added to the Finlac IT & Engineering website:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contact Form - a form that allows customers to request an inspection from the client before proceeding with any installation or repair work.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Blog Section - a section of the website dedicated to blog posts, managed through Sanity.io CMS. This allows for easy updates and changes to be made without requiring any complex technical knowledge.
 
-## Deploy on Vercel
+# Design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The design of the Finlac IT & Engineering website was entirely handled by me, using tools such as Figma for creating the website's design. The website was designed with a focus on simplicity and ease of use, with a clean and modern layout.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The colour scheme used for the website was kept simple, with a dominant shade of red used throughout the website to provide a consistent and professional look. The font choice for the website was also kept simple, with clear and legible fonts used throughout to ensure easy readability.
+
+The layout of the website was designed to be easy to navigate, with a clear menu that allows users to quickly find the information they need. The home page includes a prominent call to action button to encourage users to contact the client for their CCTV needs.
+
+Overall, the design of the Finlac IT & Engineering website is simple, modern, and easy to use, with a focus on providing users with a clean and professional experience.
+
+# Challenges
+
+No major challenges were encountered during the development of this website, thanks to the use of well-documented and well-supported tools like TailwindCSS, Next.js, TypeScript, and Sanity.io.
+
+# Conclusion
+
+Finlac IT & Engineering is a CCTV website that provides customers with easy access to professionals who can help with CCTV installation and repair. The website was built using TailwindCSS, Next.js, TypeScript, and Sanity.io, and includes features such as a contact form and blog section. No major challenges were faced during the development of the website, and the end result is a functional, user-friendly website that is easy to maintain and update.
