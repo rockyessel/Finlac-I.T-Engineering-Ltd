@@ -14,6 +14,7 @@ import {
 } from '../components';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
 import { ImCheckmark } from 'react-icons/im';
+import FormInput from '../components/forms/form-input';
 
 const choose_us_data = [
   { name: 'Alarm Monitoring 23/7' },
@@ -402,9 +403,6 @@ const Home = () => {
       </section>
 
       <Testimonials />
-      <section className='text-black flex justify-center items-center'>
-        <Form />
-      </section>
     </main>
   );
 };

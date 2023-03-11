@@ -17,7 +17,7 @@ const Lists = ({ data }: Props): JSX.Element => {
   const router = useRouter();
 
   const handleStringChange = (keyword: string) => {
-    set_String(keyword);
+    // set_String(keyword);
 
     // Change URl without page refresh NEXT.JS or making the page start.
     router.push(
